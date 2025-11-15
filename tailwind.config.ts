@@ -47,16 +47,34 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
+        medical: {
+          blue: "hsl(var(--medical-blue))",
+          "blue-light": "hsl(var(--medical-blue-light))",
+          "blue-dark": "hsl(var(--medical-blue-dark))",
         },
+        diagnostic: {
+          green: "hsl(var(--diagnostic-green))",
+          "green-light": "hsl(var(--diagnostic-green-light))",
+        },
+        clinical: {
+          gray: "hsl(var(--clinical-gray))",
+          "gray-light": "hsl(var(--clinical-gray-light))",
+        },
+        warning: {
+          amber: "hsl(var(--warning-amber))",
+          "amber-light": "hsl(var(--warning-amber-light))",
+        },
+      },
+      backgroundImage: {
+        "gradient-primary": "var(--gradient-primary)",
+        "gradient-card": "var(--gradient-card)",
+      },
+      boxShadow: {
+        clinical: "var(--shadow-clinical)",
+        elevated: "var(--shadow-elevated)",
+      },
+      transitionProperty: {
+        smooth: "var(--transition-smooth)",
       },
       borderRadius: {
         lg: "var(--radius)",
