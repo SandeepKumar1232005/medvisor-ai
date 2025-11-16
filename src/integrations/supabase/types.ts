@@ -14,7 +14,155 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      analysis_history: {
+        Row: {
+          analyzed_by: string | null
+          confidence_score: number
+          created_at: string | null
+          diagnosis: string
+          differential_diagnoses: Json | null
+          gradcam_heatmap_url: string | null
+          id: string
+          image_url: string
+          notes: string | null
+          patient_id: string
+          scan_type: string
+        }
+        Insert: {
+          analyzed_by?: string | null
+          confidence_score: number
+          created_at?: string | null
+          diagnosis: string
+          differential_diagnoses?: Json | null
+          gradcam_heatmap_url?: string | null
+          id?: string
+          image_url: string
+          notes?: string | null
+          patient_id: string
+          scan_type: string
+        }
+        Update: {
+          analyzed_by?: string | null
+          confidence_score?: number
+          created_at?: string | null
+          diagnosis?: string
+          differential_diagnoses?: Json | null
+          gradcam_heatmap_url?: string | null
+          id?: string
+          image_url?: string
+          notes?: string | null
+          patient_id?: string
+          scan_type?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "analysis_history_patient_id_fkey"
+            columns: ["patient_id"]
+            isOneToOne: false
+            referencedRelation: "patients"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      diagnostic_reports: {
+        Row: {
+          analysis_id: string
+          clinical_findings: string
+          created_at: string | null
+          id: string
+          impression: string
+          patient_id: string
+          radiologist_name: string | null
+          radiologist_signature: string | null
+          recommendations: string | null
+          report_date: string | null
+          report_title: string
+        }
+        Insert: {
+          analysis_id: string
+          clinical_findings: string
+          created_at?: string | null
+          id?: string
+          impression: string
+          patient_id: string
+          radiologist_name?: string | null
+          radiologist_signature?: string | null
+          recommendations?: string | null
+          report_date?: string | null
+          report_title: string
+        }
+        Update: {
+          analysis_id?: string
+          clinical_findings?: string
+          created_at?: string | null
+          id?: string
+          impression?: string
+          patient_id?: string
+          radiologist_name?: string | null
+          radiologist_signature?: string | null
+          recommendations?: string | null
+          report_date?: string | null
+          report_title?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "diagnostic_reports_analysis_id_fkey"
+            columns: ["analysis_id"]
+            isOneToOne: false
+            referencedRelation: "analysis_history"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "diagnostic_reports_patient_id_fkey"
+            columns: ["patient_id"]
+            isOneToOne: false
+            referencedRelation: "patients"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      patients: {
+        Row: {
+          contact_email: string | null
+          contact_phone: string | null
+          created_at: string | null
+          date_of_birth: string
+          first_name: string
+          gender: string | null
+          id: string
+          last_name: string
+          medical_record_number: string | null
+          patient_id: string
+          updated_at: string | null
+        }
+        Insert: {
+          contact_email?: string | null
+          contact_phone?: string | null
+          created_at?: string | null
+          date_of_birth: string
+          first_name: string
+          gender?: string | null
+          id?: string
+          last_name: string
+          medical_record_number?: string | null
+          patient_id: string
+          updated_at?: string | null
+        }
+        Update: {
+          contact_email?: string | null
+          contact_phone?: string | null
+          created_at?: string | null
+          date_of_birth?: string
+          first_name?: string
+          gender?: string | null
+          id?: string
+          last_name?: string
+          medical_record_number?: string | null
+          patient_id?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
