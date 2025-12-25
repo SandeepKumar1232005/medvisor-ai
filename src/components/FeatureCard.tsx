@@ -18,7 +18,7 @@ export const FeatureCard = ({ icon: Icon, title, description, color }: FeatureCa
   return (
     <Card className="p-6 shadow-clinical hover:shadow-elevated transition-all duration-300 bg-gradient-card border-border hover:border-primary/30">
       <div className={`inline-flex p-3 rounded-xl mb-4 ${colorClasses[color]}`}>
-        <Icon className="h-6 w-6" />
+        <Icon className="h-6 w-5" />
       </div>
       <h3 className="text-lg font-semibold text-foreground mb-2">{title}</h3>
       <p className="text-muted-foreground text-sm leading-relaxed">{description}</p>
