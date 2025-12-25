@@ -31,7 +31,7 @@ export const HeroSection = () => {
           <div className="flex flex-wrap justify-center gap-6 text-sm text-white/80">
             <div className="flex items-center gap-2">
               <Brain className="h-5 w-5" />
-              <span>CNN Classification</span>
+              <span>CNNClassification</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="h-5 w-5 rounded bg-white/30 flex items-center justify-center text-xs font-bold">
