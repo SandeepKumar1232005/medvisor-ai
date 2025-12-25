@@ -99,7 +99,7 @@ export const GradCAMVisualization = ({ imageUrl, showHeatmap }: GradCAMVisualiza
                 onClick={() => setIsHeatmapVisible(!isHeatmapVisible)}
                 className="h-8 w-8 p-0"
               >
-                {isHeatmapVisible ? (
+                {isHeatmapVisible? (
                   <Eye className="h-4 w-4" />
                 ) : (
                   <EyeOff className="h-4 w-4" />
