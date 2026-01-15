@@ -6,3 +6,8 @@ matplotlib
 flask
 pillow
 flask-cors
+flask-sqlalchemy
+flask-bcrypt
+flask-jwt-extended
+python-dotenv
+pytest
